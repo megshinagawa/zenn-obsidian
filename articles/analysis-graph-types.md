@@ -5,3 +5,4 @@ type: tech
 topics: 
 published: false
 ---
+とりあえず文章

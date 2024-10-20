@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "articles/analysis-graph-types.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "analysis-graph-types"
             }
           }
         ]
@@ -126,10 +126,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "articles/analysis-graph-types.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of analysis-graph-types"
             }
           }
         ],
@@ -151,19 +151,19 @@
   },
   "active": "f0ad2d18159c42c0",
   "lastOpenFiles": [
+    "articles/writing-zenn-articles-in-obsidian.md",
+    "articles/learning-notebook-on-zenn.md",
+    "articles/writing-zenn-articles-locally.md",
+    "templates/new-article-template.md",
+    "README.md",
     "daily-snippets/20241020.md",
     "daily-snippets/20241021.md",
     "articles/analysis-graph-types.md",
-    "articles/learning-notebook-on-zenn.md",
-    "articles/writing-zenn-articles-locally.md",
-    "articles/writing-zenn-articles-in-obsidian.md",
-    "templates/new-article-template.md",
     "images/obsidian-initial-screen.png",
     "images/obsidian-new-article-template.png",
     "images/obsidian-template-settings.png",
     "images/Obsidian-template.png",
     "images/Screenshot 2024-09-28 at 18.48.35.png",
-    "README.md",
     "images/card-display.png",
     "daily-snippets",
     "templates"
