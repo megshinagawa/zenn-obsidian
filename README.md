@@ -1,0 +1,3 @@
+Zenn用の記事を管理するレポジトリ。
+
+記事をObsidian上で作成→GitHubにあげる→Zennに投稿する
