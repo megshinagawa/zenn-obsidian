@@ -1,6 +1,6 @@
 ---
-title: Zennの記事をローカルで書く方法【Zenn初心者向け】
-emoji: 🔰
+title: Zennの記事をローカルで書く方法
+emoji: 👩🏻‍💻
 type: tech
 topics:
   - Zenn

@@ -3,11 +3,11 @@ title: ObsidianでZennの記事を書けるようにしてみた
 emoji: 👀
 type: tech
 topics:
-  - Obsidian 
+  - Obsidian
   - Zenn
   - Git
   - GitHub
-published: false
+published: true
 ---
 ## Zennの記事をObsidianで編集したい理由
 
