@@ -37,7 +37,7 @@ ZennのURLカード表示は独自の形式を使っているため、Obsidian�
 
 ZennはGitHubを使えば記事や本をローカルで書くことができます。セットアップの解説はこちらでしているので、そちらのセットアップを終えてから戻ってきてください！
 
-@[card](https://zenn.dev/megshinagawa/articles/writingzennarticleslocally)
+@[card](https://zenn.dev/megshinagawa/articles/writing-zenn-articles-locally)
 
 ### 2. ObsidianでZennレポジトリを開く
 
