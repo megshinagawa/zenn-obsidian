@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "articles/analysis-graph-types.md",
+                "file": "articles/mac-user-git-ssh-key-guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "analysis-graph-types"
+              "title": "mac-user-git-ssh-key-guide"
             }
           }
         ]
@@ -126,10 +126,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "articles/analysis-graph-types.md"
+                "file": "articles/mac-user-git-ssh-key-guide.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of analysis-graph-types"
+              "title": "Outline of mac-user-git-ssh-key-guide"
             }
           }
         ],
@@ -151,21 +151,35 @@
   },
   "active": "f0ad2d18159c42c0",
   "lastOpenFiles": [
-    "articles/writing-zenn-articles-in-obsidian.md",
-    "articles/learning-notebook-on-zenn.md",
+    "images/Screenshot 2024-10-21 at 9.48.22.png",
+    "articles/mac-user-git-ssh-key-guide.md",
+    "images/sshkeyinterface.png",
+    "images/githubsshnavigation.png",
+    "images/Screenshot 2024-10-21 at 9.48.42.png",
+    "images/Screenshot 2024-10-21 at 9.48.33.png",
     "articles/writing-zenn-articles-locally.md",
+    "node_modules/zenn-cli/dist/client/logo.svg",
+    "node_modules/zenn-cli/dist/server/zenn.js.LICENSE.txt",
+    "node_modules/zenn-cli/dist/client/favicon.png",
+    "node_modules/zenn-cli/dist/client/static-images/folder-open.svg",
+    "node_modules/zenn-cli/dist/client/static-images/folder-close.svg",
+    "node_modules/zenn-cli/dist/client/static-images/copy-icon.svg",
+    "node_modules/zenn-cli/dist/client/static-images",
+    "node_modules/zenn-cli/README.md",
+    "node_modules/zenn-cli/package.json",
+    "node_modules/zenn-cli/LICENSE",
+    "node_modules/zenn-cli/dist/client/assets/index-e3b468d9.css",
+    "node_modules/zenn-cli/dist/client/assets/index-24296a7f.js",
+    "node_modules/zenn-cli/dist/client/assets/index-21c400f1.js",
+    "node_modules/zenn-cli/dist/server/zenn.js",
+    "node_modules/zenn-cli/dist/client/index.html",
+    "node_modules/zenn-cli/dist/client/assets",
+    "daily-snippets/20241021.md",
+    "articles/writing-zenn-articles-in-obsidian.md",
+    "articles/analysis-graph-types.md",
+    "articles/learning-notebook-on-zenn.md",
     "templates/new-article-template.md",
     "README.md",
-    "daily-snippets/20241020.md",
-    "daily-snippets/20241021.md",
-    "articles/analysis-graph-types.md",
-    "images/obsidian-initial-screen.png",
-    "images/obsidian-new-article-template.png",
-    "images/obsidian-template-settings.png",
-    "images/Obsidian-template.png",
-    "images/Screenshot 2024-09-28 at 18.48.35.png",
-    "images/card-display.png",
-    "daily-snippets",
-    "templates"
+    "daily-snippets/20241020.md"
   ]
 }
