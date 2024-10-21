@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "articles/mac-user-git-ssh-key-guide.md",
+                "file": "daily-snippets/20241021.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mac-user-git-ssh-key-guide"
+              "title": "20241021"
             }
           }
         ]
@@ -126,10 +126,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "articles/mac-user-git-ssh-key-guide.md"
+                "file": "daily-snippets/20241021.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of mac-user-git-ssh-key-guide"
+              "title": "Outline of 20241021"
             }
           }
         ],
@@ -151,8 +151,10 @@
   },
   "active": "f0ad2d18159c42c0",
   "lastOpenFiles": [
-    "images/Screenshot 2024-10-21 at 9.48.22.png",
+    "daily-snippets/20241020.md",
+    "daily-snippets/20241021.md",
     "articles/mac-user-git-ssh-key-guide.md",
+    "images/Screenshot 2024-10-21 at 9.48.22.png",
     "images/sshkeyinterface.png",
     "images/githubsshnavigation.png",
     "images/Screenshot 2024-10-21 at 9.48.42.png",
@@ -174,12 +176,10 @@
     "node_modules/zenn-cli/dist/server/zenn.js",
     "node_modules/zenn-cli/dist/client/index.html",
     "node_modules/zenn-cli/dist/client/assets",
-    "daily-snippets/20241021.md",
     "articles/writing-zenn-articles-in-obsidian.md",
     "articles/analysis-graph-types.md",
     "articles/learning-notebook-on-zenn.md",
     "templates/new-article-template.md",
-    "README.md",
-    "daily-snippets/20241020.md"
+    "README.md"
   ]
 }
