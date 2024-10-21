@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "articles/mac-user-git-ssh-key-guide.md",
+                "file": "articles/writing-zenn-articles-in-obsidian.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "mac-user-git-ssh-key-guide"
+              "title": "writing-zenn-articles-in-obsidian"
             }
           }
         ]
@@ -126,10 +126,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "articles/mac-user-git-ssh-key-guide.md"
+                "file": "articles/writing-zenn-articles-in-obsidian.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of mac-user-git-ssh-key-guide"
+              "title": "Outline of writing-zenn-articles-in-obsidian"
             }
           }
         ],
@@ -151,13 +151,16 @@
   },
   "active": "f0ad2d18159c42c0",
   "lastOpenFiles": [
-    "images/Screenshot 2024-10-21 at 9.48.22.png",
     "articles/mac-user-git-ssh-key-guide.md",
+    "articles/learning-notebook-on-zenn.md",
+    "articles/analysis-graph-types.md",
+    "articles/writing-zenn-articles-locally.md",
+    "articles/writing-zenn-articles-in-obsidian.md",
+    "images/Screenshot 2024-10-21 at 9.48.22.png",
     "images/sshkeyinterface.png",
     "images/githubsshnavigation.png",
     "images/Screenshot 2024-10-21 at 9.48.42.png",
     "images/Screenshot 2024-10-21 at 9.48.33.png",
-    "articles/writing-zenn-articles-locally.md",
     "node_modules/zenn-cli/dist/client/logo.svg",
     "node_modules/zenn-cli/dist/server/zenn.js.LICENSE.txt",
     "node_modules/zenn-cli/dist/client/favicon.png",
@@ -175,9 +178,6 @@
     "node_modules/zenn-cli/dist/client/index.html",
     "node_modules/zenn-cli/dist/client/assets",
     "daily-snippets/20241021.md",
-    "articles/writing-zenn-articles-in-obsidian.md",
-    "articles/analysis-graph-types.md",
-    "articles/learning-notebook-on-zenn.md",
     "templates/new-article-template.md",
     "README.md",
     "daily-snippets/20241020.md"
