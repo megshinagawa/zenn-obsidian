@@ -1,6 +1,6 @@
 ---
 title: MarkdownをHTMLに変換するSSGを作りたい【SSG-PJ-01】
-emoji: ♻️
+emoji: 💡
 type: idea
 topics:
   - Obsidian
