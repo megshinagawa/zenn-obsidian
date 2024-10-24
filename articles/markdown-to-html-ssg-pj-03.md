@@ -9,6 +9,20 @@ topics:
   - SSG
 published: false
 ---
+## 今までの流れ
+
+Markdown→HTMLのSSGを作りたい！
+@[card]()
+
+Markdown→HTMLのSSGを作ってみた！
+@[card]()
+
+## `title`をYAMLに入れたくない（どうでもいい）こだわり
+
+めんどくさがりやの自分は`title`をわざわざYAMLに書き出すのが面倒だと思ってます。（だからプラグイン作るはめになってるけど、どっちの方がめんどくさいの？っていうツッコミは置いといて・・・）データが二重になるし、なんかやなんですよね。
+
+というわけで、markdown内の`h1`を自動的にHTMLの`title`に変換してくれるプラグインを作りました。
+
 ## Add Plugin to `parseMarkdown.js`
 
 ```js: parseMarkdown.js

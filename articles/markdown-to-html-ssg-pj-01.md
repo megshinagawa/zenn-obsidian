@@ -7,13 +7,11 @@ topics:
   - Markdown
   - HTML
   - SSG
-published: false
+published: true
 ---
 ## ことの始まり
 
-ADHDの自分はどうしてもメモったものを無くします。なのでウェブ上に自分のナレッジベースをアウトプットすることでいつでも見つけられる状態にしておきたいと思ったのがことの始まりです。
-
-そうなると、自分の書き慣れているMarkdownでメモをとってそれをWebサイトか何かにアップするのがいいだろうとなりました。イメージしている理想のフローはこんな感じ：
+ADHDの自分はどうしてもメモったものを無くします。なのでウェブ上に自分のナレッジベースをアウトプットすることでいつでも見つけられる状態にしておきたいと思ったのがことの始まりです。そうなると、自分の書き慣れているMarkdownでメモをとってそれをWebサイトか何かにアップするのがいいだろうとなりました。イメージしている理想のフローはこんな感じ：
 
 ![](/images/ssgworkflowimage.jpeg)
 
@@ -29,22 +27,13 @@ ADHDの自分はどうしてもメモったものを無くします。なので�
 
 ## プロジェクトのロードマップ
 
-始める勢いはあるものの、始め方がイマイチわからなかったのでChatGPTにロードマップを作成してもらいました。それがこちら。
+初めてのプロジェクトなので予想外のことは起きると思いますが、一旦こんなロードマップを想定しています。
 
-### 1. ファイル構造
-```graphql
-my-ssg/
-├── src/              # Source code for your SSG
-├── content/          # Markdown files (your Obsidian notes)
-├── templates/        # HTML templates and CSS files
-├── public/           # Output HTML files will be generated here
-└── config.json       # Configuration file (optional)
-```
-### 2. Markdown を HTML に変換
-Markdown parser を使って `.md` ファイルをHTMLに変換
-### 3. HTML テンプレート
-templating engine を使って変換されたコンテンツをHTMLテンプレートの中に入れる（テンプレートにはCSSやレイアウト情報が含まれる）
-### 4. Command-line Interface (CLI)
-Markdownファイルを読み込んでHTMLにプロセスする簡単なCLIを作成
-### 5. Customization via CSS
-カスタム要素をCSS経由で `templates/` に入れる
+ 1. Markdown を HTML に変換する SSG スクリプトを作成
+ 2. SGG が Obsidian Flavored Markdown も変換できるように調整
+ 3. Obsidianで作成するファイルを自分使用に変換できるように調整
+ 4. HTMLを綺麗に見せる枠組みを作る（Reactとか使って？）
+ 5. ？？
+
+4以降はちょっと想像がまだできていないので、やりながら考えていきます。
+
