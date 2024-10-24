@@ -13,7 +13,7 @@ published: false
 ## このプロジェクトのそもそも
 
 Markdown→HTMLのSSGを作りたい！（Obsidian flavored markdown に対応した）
-@[card]()
+@[card](https://zenn.dev/megshinagawa/articles/markdown-to-html-ssg-pj-01)
 
 ## プロジェクト初期設定
 
