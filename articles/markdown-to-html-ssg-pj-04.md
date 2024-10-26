@@ -7,7 +7,7 @@ topics:
   - Markdown
   - HTML
   - SSG
-published: false
+published: true
 ---
 ## これまでの流れ
 
@@ -102,7 +102,7 @@ md.use(function(md) {
 });
 ```
 
-### `parseMarkdown.js`内の関数をアップデート
+## `parseMarkdown.js`内の関数をアップデート
 
 ```diff js: parseMarkdown.js
 // MarkdownをHTMLに変換する関数

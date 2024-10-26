@@ -3,7 +3,6 @@ title: H1をHTMLファイルのタイトルにするプラグイン【SSG-PJ-03�
 emoji: ✏️
 type: tech
 topics:
-  - Obsidian
   - Markdown
   - HTML
   - SSG
@@ -40,7 +39,7 @@ content content content
 </html>
 ```
 
-## 前回作成した`parseMarkdown.js`にプラグインを追加
+## `parseMarkdown.js`にプラグインを追加
 
 下記のコードを初期設定後かつMarkdownをHTMLに変換する関数の前に入れてください。
 
@@ -79,7 +78,6 @@ function processMarkdown(content) {
 	const env = {};
 	const html = md.render(body, env);
 	
-+	// If the front matter doesn't contain a title, use the extracted one
 +	if (!attributes.title && env.title) {
 +		attributes.title = env.title;
 +	}

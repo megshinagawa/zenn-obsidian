@@ -1,9 +1,8 @@
 ---
-title: ObsidianのMarkdownメモをHTMLに変換するSSG作ってみた【SSG-PJ-02】
+title: MarkdownメモをHTMLに変換するSSG作ってみた【SSG-PJ-02】
 emoji: ♻️
 type: tech
 topics:
-  - Obsidian
   - Markdown
   - HTML
   - SSG
