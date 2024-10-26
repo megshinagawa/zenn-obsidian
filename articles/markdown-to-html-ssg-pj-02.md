@@ -8,16 +8,16 @@ topics:
   - HTML
   - SSG
   - Nodejs
-published: false
+published: true
 ---
 ## このプロジェクトのそもそも
 
-Markdown→HTMLのSSGを作りたい！（Obsidian flavored markdown に対応した）
+Markdown→HTMLのSSGを作りたい！
 @[card](https://zenn.dev/megshinagawa/articles/markdown-to-html-ssg-pj-01)
 
 ## プロジェクト初期設定
 
-プロジェクトには `Node.js` を使うので、一緒に作成したい方は `Node.js` がインストールされているか確認してください。
+プロジェクトには `Node.js` を使うので、一緒に作成したい方は `Node.js` がインストールされているか確認してください。（まだの場合は[こちら](https://nodejs.org/en/download/package-manager)から。）
 
 ```bash 
 node -v 
@@ -26,8 +26,8 @@ node -v
 インストール確認後、プロジェクト用のフォルダを作成して、初期設定を行いましょう。
 
 ```bash
-mkdir obsidian-ssg
-cd obsidian-ssg
+mkdir obsidian-ssg-pj
+cd obsidian-ssg-pj
 npm init -y
 ```
 
@@ -38,11 +38,32 @@ npm init -y
 - `markdown-it`: Markdown を HTML に変換してくれるライブラリ
 - `fs-extra`: ファイルシステム操作の拡張
 - `path`: パスをいじれる
-- `chokidar`: 更新が必要かファイル見守ってくれる
+- `chokidar`: 更新が必要かファイルを見守ってくれる
 - `front-matter`: metadataをHTMLに変換できる
 
 ```bash 
 npm install markdown-it fs-extra path chokidar front-matter
+```
+
+## フォルダ構成
+
+```bash
+/obsidian-ssg-pj
+│
+├── /vault               # 変換したいMarkdownファイルを入れるフォルダ 
+│   ├── example1.md
+│   ├── example2.md
+│
+├── /public              # 変換されたHTMLファイルを入れるフォルダ
+│   ├── example1.html    
+│   ├── example2.html
+│
+├── /scripts             # 変換スクリプトを入れるフォルダ
+│   ├── parseMarkdown.js          
+│   ├── generateSite.js           
+│
+└── package.json
+
 ```
 
 ## MarkdownをHTMLに変換するスクリプト
@@ -78,10 +99,10 @@ module.exports = { processMarkdown };
 ```js: generateSite.js
 const fs = require('fs-extra');
 const path = require('path');
-const { processMarkdown } = require('./src/services/parseMarkdown');
+const { processMarkdown } = require('./parseMarkdown');
 
 // インプットファイルの置き場所
-const inputDir = 'content';
+const inputDir = 'vault';
 // アウトプットファイルの置き場所
 const outputDir = 'public';
 
@@ -124,3 +145,35 @@ function generateSite() {
 
 generateSite();
 ```
+
+## テスト用Markdownファイルを作成
+
+```md: example1.md
+---
+title: example1
+---
+
+# サンプルファイル①
+
+これは最初のテストファイルです。
+
+```
+
+```md: example2.md
+---
+title: example2
+---
+
+# サンプルファイル②
+
+これは2番目のテストファイルです。
+
+```
+
+## スクリプトを実行
+
+```bash 
+node generateSite.js
+```
+
+`public`フォルダにHTMLファイルが作成されていれば成功です！

@@ -10,14 +10,24 @@ topics:
   - React
 published: false
 ---
-## Initialize Vite Project 
+## Initialize React Project 
+
+[React: Getting Started](https://create-react-app.dev/docs/getting-started/)
 
 ```bash
-npm create vite@latest
+npx create-react-app react-obsidian-ssg
 ```
+
+## Install React Router 
+
+```bash
+npm install react-router-dom
+```
+
 
 ## Install Dependencies for SSG 
 
 ```bash 
 npm install markdown-it fs-extra path chokidar front-matter
 ```
+

@@ -9,7 +9,20 @@ topics:
   - SSG
 published: false
 ---
-## ゴール
+## これまでの流れ
+
+Markdown→HTMLのSSGを作りたい！
+@[card](https://zenn.dev/megshinagawa/articles/markdown-to-html-ssg-pj-01)
+
+Markdown→HTMLのSSGを作ってみた！
+@[card](https://zenn.dev/megshinagawa/articles/markdown-to-html-ssg-pj-02)
+
+タイトルを抽出するプラグインを作ってみた！
+@[card](https://zenn.dev/megshinagawa/articles/markdown-to-html-ssg-pj-03)
+
+## アウトプットイメージ
+
+自分はObsidianのタグ機能は使わず、自作の`topicaltags`をYAML内で使っています。`topicaltags`はタグ自体が他のメモへのリンクなので、HTMLに変換後もリンクとして扱う必要があります。イメージはこんな感じです：
 
 ```markdown 
 ---
@@ -24,107 +37,84 @@ content content content
 ```
 
 ```html
-
+<html>
+	<head>
+		<title>HEADER 1</title>
+	</head>
+	<body>
+		<h1>HEADER 1</h1>
+		<p><a href="tag1.html">tag1</a>, <a href="tag2.html">tag2</a></p>
+		<p>content content content</p>
+	</body>
+</html>
 ```
 
+## `parseMarkdown.js`にプラグインを追加
 
-## Add Plugin to `parseMarkdown.js`
+下記のコードを初期設定後かつMarkdownをHTMLに変換する関数の前に入れてください。
 
 ```js: parseMarkdown.js
-// Helper function to extract tag names from `[[tag]]` format
+// タグの中身を取り出す関数
 function extractTagsFromBrackets(tags) {
 	return tags
-		.map(tag => tag.toString().replace(/\[\[(.*?)\]\]/, '$1').trim())
-		.filter(Boolean); // Remove empty strings
+	.map(tag => tag.toString().replace(/\[\[(.*?)\]\]/, '$1').trim()) 
+	.filter(Boolean); 
 }
 
-// Plugin to insert topical tags as links at the top of the content
+// YAMLタグをH1の後に追加するプラグイン
 md.use(function(md) {
 	md.core.ruler.push('insert_topicaltags', function(state) {
-		// Check if tokens exist and are an array
 		if (!state.tokens || !Array.isArray(state.tokens)) {
-			// Early exit if there are no tokens
-			return; 
+			return; // Early exit if there are no tokens
 		}
 		if (state.env.topicaltags && state.env.topicaltags.length > 0) {
-			// Ensure tags are formatted as an array
 			const rawTags = Array.isArray(state.env.topicaltags) ? state.env.topicaltags : [state.env.topicaltags];
-			// Extract the clean tag names
 			const tags = extractTagsFromBrackets(rawTags);
-			
-			// Only proceed if there are valid tags
-			if (tags.length > 0) { 
-				// Create a new token for the paragraph containing the links
+			if (tags.length > 0) {
 				const paragraphOpen = new state.Token('paragraph_open', 'p', 1);
 				const paragraphContent = new state.Token('inline', '', 0);
-				// Construct the links for each tag
-				const links = tags.map(tag => `<a href="${tag}.html">${tag}</a>`);
-				// Assign the links array to the paragraphContent
+				const links = tags.map(tag => `<a href="${tag}.html">${tag}</a>`);	
 				paragraphContent.content = links.join(', ');
-				
-				// Initialize children as an array to hold link tokens
 				paragraphContent.children = [];
-				
-				// Create child tokens for each tag
 				tags.forEach((tag, index) => {
-					// Opening <a> tag
-					const linkToken = new state.Token('link_open', 'a', 1); 
-					// Setting the href attribute
-					linkToken.attrs = [['href', `${tag}.html`]]; 
-					
-					// Inline token for the link text
-					const linkContentToken = new state.Token('text', '', 0); 
-					// Set the link text (tag name)
+					const linkToken = new state.Token('link_open', 'a', 1);
+					linkToken.attrs = [['href', `${tag}`]]; 
+					const linkContentToken = new state.Token('text', '', 0);
 					linkContentToken.content = tag; 
-					
-					// Closing </a> tag
 					const linkCloseToken = new state.Token('link_close', 'a', -1); 
-					
-					// Push the tokens for the link into the paragraphContent's children
 					paragraphContent.children.push(linkToken, linkContentToken, linkCloseToken);
-					
-					// Add a separator if it's not the last tag
 					if (index < tags.length - 1) {
 						const separator = new state.Token('text', '', 0);
-						separator.content = ', ';
+						separator.content = ', '; 
 						paragraphContent.children.push(separator);
 					}
 				});
 				const paragraphClose = new state.Token('paragraph_close', 'p', -1);
-				
-				// Insert the paragraph with the links at the very beginning of the body content
-				state.tokens.unshift(paragraphOpen, paragraphContent, paragraphClose); 
+				const h1Index = state.tokens.findIndex(token => token.type === 'heading_open' && token.tag === 'h1');
+				if (h1Index !== -1) {
+					state.tokens.splice(h1Index + 3, 0, paragraphOpen, paragraphContent, paragraphClose);
+				} else {
+					console.warn("No H1 tag found to insert topical tags after.");
+				}
 			}
 		}
 	});
 });
 ```
 
-### Update the Function to Process Markdown 
+### `parseMarkdown.js`内の関数をアップデート
 
 ```diff js: parseMarkdown.js
-
-// FUNCTION TO PROCESS MARKDOWN
+// MarkdownをHTMLに変換する関数
 function processMarkdown(content) {
-	
-	// Parse front matter and body
 	const { body, attributes } = frontMatter(content);
-	
-	// Prepare the environment
 	const env = {
 +		topicaltags: attributes.topicaltags || []
 	};
-	
-	// Render the markdown body to HTML
 	const html = md.render(body, env);
-	
-	// If the front matter doesn't contain a title, use the extracted one
 	if (!attributes.title && env.title) {
 		attributes.title = env.title;
 	}
-	
-	// Return the rendered HTML along with any metadata
 	return { html, metadata: attributes };
 }
-
 ```
