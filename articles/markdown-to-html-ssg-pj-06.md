@@ -7,7 +7,7 @@ topics:
   - Markdown
   - HTML
   - SSG
-  - React
+  - nextjs
 published: false
 ---
 ## Initialize React Project 
