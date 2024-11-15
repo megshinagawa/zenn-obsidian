@@ -5,7 +5,7 @@ type: idea
 topics:
   - datascience
   - datanalysis
-published: false
+published: true
 ---
 ## 自分の経歴
 
